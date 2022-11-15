@@ -8,8 +8,10 @@ namespace BookRegistration
 {
     internal class Book
     {
-        //ISBN
-        //Price
-        //Title
+        public string ISBN { get; set; } 
+
+        public double Price { get; set; }
+
+        public string Title { get; set; }
     }
 }

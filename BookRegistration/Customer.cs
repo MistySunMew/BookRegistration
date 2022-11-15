@@ -8,9 +8,14 @@ namespace BookRegistration
 {
     internal class Customer
     {
-        //CustomerID
-        //DateOfBirth
-        //FirstName
-        //LastName
+        public int CustomerID { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
+        
+        public string FirstName { get; set; }
+        
+        public string LastName { get; set; }
+
+        public string Title { get; set; }
     }
 }

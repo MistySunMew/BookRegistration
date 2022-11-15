@@ -8,7 +8,10 @@ namespace BookRegistration
 {
     internal class Registration
     {
-        //CustomerID
-        //ISBN
+        public int CustomerID { get; set; }
+
+        public string ISBN { get; set; }
+
+        public DateTime RegDate { get; set; }
     }
 }
