@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookRegistration
 {
-    internal class BookRegistrationDB
+    static class BookRegistrationDB
     {
         //RegisterBook
     }

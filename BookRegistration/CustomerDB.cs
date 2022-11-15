@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BookRegistration
 {
-    static class DBHelper
+    static class CustomerDB
     {
-        //GetConnection
+        //GetAllCustomers
     }
 }
