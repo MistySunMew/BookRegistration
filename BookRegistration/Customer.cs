@@ -17,5 +17,10 @@ namespace BookRegistration
         public string LastName { get; set; }
 
         public string Title { get; set; }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }
