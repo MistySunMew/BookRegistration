@@ -34,6 +34,8 @@
             this.cbxCustomers = new System.Windows.Forms.ComboBox();
             this.cbxBooks = new System.Windows.Forms.ComboBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddCustomer
@@ -56,17 +58,18 @@
             // 
             // btnRegisterBook
             // 
-            this.btnRegisterBook.Location = new System.Drawing.Point(107, 278);
+            this.btnRegisterBook.Location = new System.Drawing.Point(224, 270);
             this.btnRegisterBook.Name = "btnRegisterBook";
             this.btnRegisterBook.Size = new System.Drawing.Size(219, 96);
             this.btnRegisterBook.TabIndex = 2;
             this.btnRegisterBook.Text = "Register Book";
             this.btnRegisterBook.UseVisualStyleBackColor = true;
+            this.btnRegisterBook.Click += new System.EventHandler(this.btnRegisterBook_Click);
             // 
             // cbxCustomers
             // 
             this.cbxCustomers.FormattingEnabled = true;
-            this.cbxCustomers.Location = new System.Drawing.Point(85, 44);
+            this.cbxCustomers.Location = new System.Drawing.Point(154, 40);
             this.cbxCustomers.Name = "cbxCustomers";
             this.cbxCustomers.Size = new System.Drawing.Size(289, 33);
             this.cbxCustomers.TabIndex = 3;
@@ -74,23 +77,43 @@
             // cbxBooks
             // 
             this.cbxBooks.FormattingEnabled = true;
-            this.cbxBooks.Location = new System.Drawing.Point(85, 117);
+            this.cbxBooks.Location = new System.Drawing.Point(154, 118);
             this.cbxBooks.Name = "cbxBooks";
             this.cbxBooks.Size = new System.Drawing.Size(289, 33);
             this.cbxBooks.TabIndex = 4;
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(85, 187);
+            this.dtpDate.Location = new System.Drawing.Point(143, 187);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(300, 31);
             this.dtpDate.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(59, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Customer";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(89, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Book";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.cbxBooks);
             this.Controls.Add(this.cbxCustomers);
@@ -101,6 +124,7 @@
             this.Text = "Book Registration";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,5 +136,7 @@
         private ComboBox cbxCustomers;
         private ComboBox cbxBooks;
         private DateTimePicker dtpDate;
+        private Label label1;
+        private Label label2;
     }
 }

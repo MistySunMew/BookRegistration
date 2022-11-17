@@ -21,7 +21,6 @@ namespace BookRegistration
             {
                 cbxBooks.Items.Add(book);
             }
-            cbxBooks.SelectedIndex = 0;
         }
 
         private void PopulateCustomerList()
@@ -33,7 +32,26 @@ namespace BookRegistration
                 cbxCustomers.Items.Add(customer);
 
             }
-            cbxCustomers.SelectedIndex = 0;
+        }
+
+        private void btnRegisterBook_Click(object sender, EventArgs e)
+        {
+            Book book = new Book();
+            book = (Book)cbxBooks.SelectedItem;
+
+            Customer customer = new Customer();
+            customer = (Customer)cbxCustomers.SelectedItem;
+
+            Registration registration = new Registration();
+            registration.ISBN = book.ISBN;
+            registration.CustomerID = customer.CustomerID;
+            registration.RegDate = dtpDate.Value;
+
+            BookRegistrationDB.RegisterBook(registration);
+
+            MessageBox.Show("Thank You, your request had been handled");
+            cbxBooks.SelectedItem = null;
+            cbxCustomers.SelectedItem = null;
         }
     }
 }
