@@ -17,13 +17,13 @@ namespace BookRegistration
         /// <returns>A list of Customers</returns>
         public static List<Customer> GetAllCustomers()
         {
-            SqlConnection conn = DBHelper.GetConnection();
+            SqlConnection con = DBHelper.GetConnection();
 
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.Connection = conn;
+            sqlCommand.Connection = con;
             sqlCommand.CommandText = "SELECT CustomerID, DateOfBirth, FirstName, LastName, Title" +
                 " FROM Customer";
-            conn.Open();
+            con.Open();
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             List<Customer> customers = new List<Customer>();
@@ -38,12 +38,12 @@ namespace BookRegistration
 
                 customers.Add(c);
             }
-            conn.Close();
+            con.Close();
             return customers;
         }
 
         /// <summary>
-        /// Takes a Customer and inserts it into the customers table in the database
+        /// Takes a Customer and inserts it into the Customer table in the database
         /// </summary>
         /// <param name="c">Customer to be inserted</param>
         public static void AddCustomer(Customer c)
