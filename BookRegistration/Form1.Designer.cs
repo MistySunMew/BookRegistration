@@ -46,6 +46,7 @@
             this.btnAddCustomer.TabIndex = 0;
             this.btnAddCustomer.Text = "Add Customer";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnAddBook
             // 
@@ -55,6 +56,7 @@
             this.btnAddBook.TabIndex = 1;
             this.btnAddBook.Text = "Add Book";
             this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnRegisterBook
             // 

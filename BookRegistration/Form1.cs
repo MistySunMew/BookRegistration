@@ -53,5 +53,19 @@ namespace BookRegistration
             cbxBooks.SelectedItem = null;
             cbxCustomers.SelectedItem = null;
         }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            FrmAddCustomer frmAddCustomer = new FrmAddCustomer();
+            frmAddCustomer.ShowDialog();
+            PopulateCustomerList();
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            FrmAddBook frmAddBook = new FrmAddBook();
+            frmAddBook.ShowDialog();
+            PopulateBookList();
+        }
     }
 }
